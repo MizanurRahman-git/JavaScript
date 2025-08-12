@@ -1,0 +1,41 @@
+function validProposal(input1, input2){
+
+    if(typeof input1 !== "object" || typeof input2 !== "object"){
+        return "Invalid"
+    }
+
+    if(input1.gender === input2.gender){
+        return false;
+    }
+
+    if(Math.abs(input1.age - input2.age) > 7){
+        return false ;
+    }
+
+    return true;
+}
+
+console.log(validProposal(
+{ name: "Rahul", gender: "male", age: 28 },
+{ name: "Joya", gender: "female", age: 21 }
+))
+console.log(validProposal(
+{ name: "milon", gender: "male", age: 20 },
+{ name: "sumi", gender: "female", age: 25 }
+))
+console.log(validProposal(
+{ name: "shuvo", gender: "male", age: 20 },
+{ name: "joy", gender: "male", age: 25 }
+))
+console.log(validProposal(
+{ name: "toya", gender: "female", age: 20 },
+{ name: "kader", gender: "male", age: 25 }
+))
+console.log(validProposal(
+{ name: "toya", gender: "female", age: 24 },
+{ name: "bjoy", gender: "male", age: 32 }
+))
+console.log(validProposal(
+"Mizan", { name: "mitu", gender: "male", age: 32 }))
+console.log(validProposal(
+{ name: "mitu", gender: "male", age: 32 }, "Mizan"))

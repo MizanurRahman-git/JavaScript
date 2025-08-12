@@ -48,10 +48,10 @@
 
 
 
-function numberOfArray(nums){
-    const result = nums.length
-    return result;
-}
+// function numberOfArray(nums){
+//     const result = nums.length
+//     return result;
+// }
 
-const len = numberOfArray([12,34,45,24,76,1234,45,78,34]);
-console.log(len)
+// const len = numberOfArray([12,34,45,24,76,1234,45,78,34]);
+// console.log(len)
