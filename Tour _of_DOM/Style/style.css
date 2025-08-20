@@ -1,0 +1,19 @@
+.bg{
+    background-color: #BBDCE5;
+}
+
+.font-color{
+    color: #468A9A;
+}
+
+.text-centar{
+    text-align: center;
+}
+
+.section-card{
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+}
