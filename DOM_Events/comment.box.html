@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Box</title>
+
+    <style>
+      .comment {
+        border: 1px solid blue;
+        padding: 10px;
+        background-color: rgb(205, 236, 236);
+        margin: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Awesome Comment box. Write what in your mind</h1>
+
+    <section>
+      <h2>All Comments Here</h2>
+
+      <div id="comment-container">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+          eos.
+        </p>
+
+        <p class="comment">
+          Expedita sit ducimus nostrum dicta nulla ab vitae architecto delectus!
+        </p>
+
+        <p class="comment">
+          Dolores magnam nihil harum minus assumenda. Consequuntur architecto
+          aliquam excepturi.
+        </p>
+      </div>
+
+      <!-- <form> -->
+      <textarea name="" id="comment-text" cols="50" rows="5"></textarea> <br />
+      <button id="comment-btn">Comment</button>
+      <!-- </form> -->
+    </section>
+
+    <script>
+      document
+        .getElementById("comment-btn")
+        .addEventListener("click", function () {
+          const commentText = document.getElementById("comment-text");
+
+          const newComment = commentText.value;
+
+          const commentContainer = document.getElementById("comment-container");
+
+          const commentElement = document.createElement("p");
+
+          commentElement.classList.add("comment");
+
+          commentElement.innerText = newComment;
+
+          commentContainer.appendChild(commentElement);
+
+          commentText.value = "";
+        });
+    </script>
+  </body>
+</html>
